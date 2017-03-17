@@ -4,7 +4,7 @@
 ## Author: Bobby Yang && Elaine Yeung (Batch 2)
 
 ## Synopsis
-
+This is a custom implementation of `printf` from the standard library `<stdio.h>`.
 
 ## File Breakdown
 
