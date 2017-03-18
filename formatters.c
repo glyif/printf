@@ -26,3 +26,13 @@ void print_char(va_list ap)
 
 	_putchar(s);
 }
+
+void print_decimal(va_list ap)
+{
+	_putchar(va_arg(ap, int) + '0');
+}
+
+void print_int(va_list ap)
+{
+	_putchar(va_arg(ap, int) + '0');
+}

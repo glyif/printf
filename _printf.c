@@ -18,6 +18,8 @@ int _printf(const char *format, ...)
 	print p[] = {
 		{"s", print_string},
 		{"c", print_char},
+		{"d", print_decimal},
+		{"i", print_int},
 		{NULL, NULL}
 	};
 
@@ -51,9 +53,8 @@ int _printf(const char *format, ...)
 		i++;
 			
 	}
-
-	_putchar('\n');
 	va_end(ap);
 
+	_putchar('\n');
 	return (0);
 }
