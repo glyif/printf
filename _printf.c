@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
+#include <unistd.h>
 
 /**
  * print_all - prints anything
@@ -13,13 +14,14 @@
 int _printf(const char *format, ...)
 {
 	int i, j;
+	int index;
 
+	char buffer[1024];
+	
 	va_list ap;
 	print p[] = {
-		{"s", print_string},
-		{"c", print_char},
-		{"d", print_decimal},
-		{"i", print_int},
+		{"s", buffer_string},
+		{"c", buffer_char},
 		{NULL, NULL}
 	};
 
@@ -27,11 +29,17 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
+	index = 0;
+
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] != '%' && format[i - 1] != '%')
 		{
-			_putchar(format[i]);
+			buffer[index] = format[i];
+		}
+		else if (format[i] == '%' && format[i + 1] == '%')
+		{
+			buffer[index] = '%';
 		}
 		else if (format[i] == '%')
 		{
@@ -42,7 +50,7 @@ int _printf(const char *format, ...)
 			while (p[j].c != NULL)
 			{
 				if (format[i] == p[j].c[0])
-					p[j].f(ap);
+					index = p[j].f(ap, buffer, index);
 				j++;
 			}
 
@@ -51,9 +59,13 @@ int _printf(const char *format, ...)
 		}
 
 		i++;
+		index++;
 			
 	}
+
 	va_end(ap);
+	
+	write(1, buffer, index);
 
 	_putchar('\n');
 	return (0);

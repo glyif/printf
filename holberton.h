@@ -7,8 +7,6 @@ int _putchar(char c);
 int _strlen(char *s);
 void _strcpy(char *to, char *from);
 int _printf(const char *format, ...);
-void print_string(va_list ap);
-void print_char(va_list ap);
-void print_decimal(va_list ap);
-void print_int(va_list ap);
+int buffer_string(va_list ap, char *buffer, int index);
+int buffer_char(va_list ap, char *buffer, int index);
 #endif

@@ -6,33 +6,25 @@
  * @ap: va_list
  */
 
-void print_string(va_list ap)
+int buffer_string(va_list ap, char *buffer, int index)
 {
 	int i;
 	char *s;
 	
 	s = va_arg(ap, char *);
 
-	for (i = 0; s[i] != '\0'; i++)
-		_putchar(s[i]);
+	for (i = 0; s[i] != '\0'; i++, index++)
+		buffer[index] = s[i];
 
-	_putchar('\0');
+	return (index);
 }
 
-void print_char(va_list ap)
+int print_char(va_list ap, char *buffer, int index)
 {
 	char s;
 	s = va_arg(ap, int);
 
-	_putchar(s);
-}
+	buffer[index] = s;
 
-void print_decimal(va_list ap)
-{
-	_putchar(va_arg(ap, int) + '0');
-}
-
-void print_int(va_list ap)
-{
-	_putchar(va_arg(ap, int) + '0');
+	return (index + 1);
 }

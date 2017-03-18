@@ -21,6 +21,7 @@ int main(void)
 	printf("asdfasdfas");
 	_printf("fasdf %s %s", s, s2);
 	_printf("%d %i", num, num);
+	_printf("%%");
 	/**
     int len;
 	int len2;
