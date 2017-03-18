@@ -21,34 +21,35 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 
-	va_start(ap, format);
-
 	i = 0;
+
+	va_start(ap, format);
 
 	while (format != NULL && format[i] != '\0')
 	{
-		j = 0;
-
-
-		if (format[i] == '%')
+		if (format[i] != '%' && format[i - 1] != '%')
 		{
-			while (p[j].c != NULL)
-			{
-				if (format[i + 1] == p[j].c[0])
-				{
-					p[j].f(ap);
-				}
-
-				j++;
-			}
+			_putchar(format[i]);
 		}
-		else
+		else if (format[i] == '%')
 		{
 			i++;
-			_putchar(format[i]);
+
+			j = 0;
+
+			while (p[j].c != NULL)
+			{
+				if (format[i] == p[j].c[0])
+					p[j].f(ap);
+				j++;
+			}
+
+			i--;
+
 		}
 
 		i++;
+			
 	}
 
 	_putchar('\n');

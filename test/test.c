@@ -10,10 +10,12 @@
 int main(void)
 {
 	char *s;
+	char *s2;
 	s = "hello";
-
+	s2 = "hello2";
+	
 	printf("asdfasdfas");
-	_printf("%s", s);
+	_printf("fasdf %s %s", s, s2);
 	/**
     int len;
 	int len2;
