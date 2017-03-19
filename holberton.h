@@ -9,6 +9,7 @@ void _strcpy(char *to, char *from);
 char *int_string(int n);
 void _rev(char *s);
 int intlen(int n);
+int _abs(int n);
 int _printf(const char *format, ...);
 int buffer_string(va_list ap, char *buffer, int index);
 int buffer_char(va_list ap, char *buffer, int index);

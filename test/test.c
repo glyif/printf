@@ -16,7 +16,7 @@ int main(void)
 
 	c = 'p';
 
-	i = 123455;
+	i = -123455;
 
 	s = "hello";
 	s2 = "hello2";

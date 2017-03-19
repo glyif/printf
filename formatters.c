@@ -33,8 +33,18 @@ int buffer_int(va_list ap, char *buffer, int index)
 {
 	int i;
 	char *s;
+	
+	int in;
+	in = va_arg(ap, int);
+	
+	if (in < 0)
+	{
+		in = _abs(in);
+		buffer[index] = '-';
+		index++;
+	}
 
-	s = int_string(va_arg(ap, int));
+	s = int_string(in);
 
 	for (i = 0; s[i] != '\0'; i++, index++)
 		buffer[index] = s[i];

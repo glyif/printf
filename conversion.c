@@ -10,7 +10,14 @@ char *int_string(int n)
 	s = malloc(intlen(n) * sizeof(int));
 	
 	if (n == 0)
+	{
 		s[i] = '0';
+	}
+	else if (n < 0)
+	{
+		n = _abs(n);
+	}
+		
 
 	while (n != 0)
 	{
