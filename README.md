@@ -18,4 +18,16 @@ gcc -Werror -Wextra -pedantic test/test.c _printf.c formatters.c _putchar.c _str
 For this command you will need to be in the `root` project folder, not the `main` folder. As you'll be compiling the `main/0-main.c` file in the `main` folder and the `0-sum_them_all.c` file in the current directory.
 
 ## TODO
+### Handle the following conversion specifiers:
+- [x] c - `char`
+- [x] s - `string`
+- [ ] % - `percent`
+- [x] d - `decimal`
+- [x] i - `integer`
+- [x] b - `binary`
+
+### Base Printf
+- [ ] Write output to stdout, the standard output stream
+- [x] Returns: the number of characters printed (excluding the null byte used to end output to strings)
+
 - [ ] Get [@Julien Barbier](https://github.com/jbarbier) to say I did a good job ;)
