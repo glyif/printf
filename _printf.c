@@ -13,20 +13,12 @@
 
 int _printf(const char *format, ...)
 {
-	int i, j;
+	int i;
 	int index;
+	int (*routing)(va_list, char *, int);
 
 	char buffer[1024];
 	va_list ap;
-
-	print p[] = {
-		{"s", buffer_string},
-		{"c", buffer_char},
-		{"i", buffer_int},
-		{"d", buffer_int},
-		{"b", buffer_int_b},
-		{NULL, NULL}
-	};
 
 	i = 0;
 	index = 0;
@@ -42,19 +34,8 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%')
 		{
-			i++;
-
-			j = 0;
-
-			while (p[j].c != NULL)
-			{
-				if (format[i] == p[j].c[0])
-					index = p[j].f(ap, buffer, index);
-				j++;
-			}
-
-			i--;
-
+			routing = router(format[i + 1]);
+			index = routing(ap, buffer, index);
 		}
 
 		i++;
