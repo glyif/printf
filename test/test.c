@@ -11,6 +11,8 @@ int main(void)
 {
 	char *s;
 	char *s2;
+	char *s3;
+	char *s4;
 	char c;
 	int i;
 	int b;
@@ -19,13 +21,18 @@ int main(void)
 
 	i = -123455;
 
-	s = "hello";
-	s2 = "hello2";
+	s = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in vehicula ipsum. Aliquam sit amet aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus venenatis euismod nibh, eget elementum metus fringilla a. Ut tincidunt auctor posuere. Phasellus quis neque metus. Nam in justo ut sapien blandit auctor sed at neque. In aliquam molestie egestas. Donec ac urna auctor, sollicitudin purus et, eleifend tellus. Cras ultricies massa nunc.";
+
+	s2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in vehicula ipsum. Aliquam sit amet aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus venenatis euismod nibh, eget elementum metus fringilla a. Ut tincidunt auctor posuere. Phasellus quis neque metus. Nam in justo ut sapien blandit auctor sed at neque. In aliquam molestie egestas. Donec ac urna auctor, sollicitudin purus et, eleifend tellus. Cras ultricies massa nunc.";
+
+	s3 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in vehicula ipsum. Aliquam sit amet aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus venenatis euismod nibh, eget elementum metus fringilla a. Ut tincidunt auctor posuere. Phasellus quis neque metus. Nam in justo ut sapien blandit auctor sed at neque. In aliquam molestie egestas. Donec ac urna auctor, sollicitudin purus et, eleifend tellus. Cras ultricies massa nunc.";
+
+	s4 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in vehicula ipsum. Aliquam sit amet aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus venenatis euismod nibh, eget elementum metus fringilla a. Ut tincidunt auctor posuere. Phasellus quis neque metus. Nam in justo ut sapien blandit auctor sed at neque. In aliquam molestie egestas. Donec ac urna auctor, sollicitudin purus et, eleifend tellus. Cras ultricies massa nunc.";
 	
 	b = -98;
 
 	printf("asdfasdfas");
-	_printf("fasdf %s, %c, %s, %i, %b", s, c, s2, i, b);
+	_printf("fasdf %s, %c, %s, %s, %s, %i, %b", s, c, s2, s3, s4, i, b);
 	_printf("%b\n", 98);
 	/**
     int len;
