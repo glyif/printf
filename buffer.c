@@ -1,32 +1,6 @@
 #include "holberton.h"
 
 /**
- * _strcpy - copy from one to another
- * @buffer: to buffer
- * @from: from
- * @index: start index;
- *
- */
-
-int _strcpy(char *buffer, char *from, int index)
-{
-	int i;
-	
-	i = 0;
-
-	while(from[i] != '\0')
-	{
-		index = buffer_check(buffer, index);
-
-		buffer[index] = from[i];
-		i++;
-		index++;
-	}
-
-	return (index);
-}
-
-/**
  * buffer_check - checks if buffer is filled
  * @buffer - buffer to check
  * @index - current index of the buffer
@@ -46,3 +20,10 @@ int buffer_check(char *buffer, int index)
 	return (index);
 }
 
+void reset_buffer(char *buffer, int size)
+{
+	int i;
+
+	for (i = 0; i < size; i++)
+		buffer[i] = 0;
+}

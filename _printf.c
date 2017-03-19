@@ -44,6 +44,5 @@ int _printf(const char *format, ...)
 	va_end(ap);
 
 	write(1, buffer, index);
-	_putchar('\n');
 	return (index);
 }
