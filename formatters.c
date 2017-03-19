@@ -36,9 +36,9 @@ int buffer_int(va_list ap, char *buffer, int index)
 	
 	if (in < 0)
 	{
+		index = buffer_check(buffer, index);
+		index = negative_copy(buffer, index);
 		in = _abs(in);
-		buffer[index] = '-';
-		index++;
 	}
 
 	s = int_string(in);
@@ -56,6 +56,8 @@ int buffer_int_b(va_list ap, char *buffer, int index)
 
 	if (in < 0)
 	{
+		index = buffer_check(buffer, index);
+
 		in = _abs(in);
 		buffer[index] = '-';
 		index++;
