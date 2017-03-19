@@ -64,5 +64,5 @@ int _printf(const char *format, ...)
 
 	write(1, buffer, index);
 	_putchar('\n');
-	return (0);
+	return (index);
 }
