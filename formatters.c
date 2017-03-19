@@ -19,12 +19,12 @@ int buffer_string(va_list ap, char *buffer, int index)
 	return (index);
 }
 
-int print_char(va_list ap, char *buffer, int index)
+int buffer_char(va_list ap, char *buffer, int index)
 {
 	char s;
 	s = va_arg(ap, int);
 
 	buffer[index] = s;
 
-	return (index + 1);
+	return (index + 4);
 }

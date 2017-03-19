@@ -11,17 +11,12 @@ int main(void)
 {
 	char *s;
 	char *s2;
-	int num;
 
 	s = "hello";
 	s2 = "hello2";
 	
-	num = 1;
-
 	printf("asdfasdfas");
 	_printf("fasdf %s %s", s, s2);
-	_printf("%d %i", num, num);
-	_printf("%%");
 	/**
     int len;
 	int len2;

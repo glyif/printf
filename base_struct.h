@@ -8,5 +8,5 @@
 typedef struct print
 {
 	char *c;
-	void (*f)();
+	int (*f)();
 } print;

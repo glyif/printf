@@ -1,8 +1,8 @@
 #include <stdarg.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
-#include <unistd.h>
 
 /**
  * print_all - prints anything
@@ -17,29 +17,24 @@ int _printf(const char *format, ...)
 	int index;
 
 	char buffer[1024];
-	
 	va_list ap;
+
 	print p[] = {
 		{"s", buffer_string},
-		{"c", buffer_char},
 		{NULL, NULL}
 	};
 
 	i = 0;
+	index = 0;
 
 	va_start(ap, format);
-
-	index = 0;
 
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] != '%' && format[i - 1] != '%')
 		{
 			buffer[index] = format[i];
-		}
-		else if (format[i] == '%' && format[i + 1] == '%')
-		{
-			buffer[index] = '%';
+			index++;
 		}
 		else if (format[i] == '%')
 		{
@@ -59,14 +54,11 @@ int _printf(const char *format, ...)
 		}
 
 		i++;
-		index++;
 			
 	}
-
 	va_end(ap);
-	
-	write(1, buffer, index);
 
+	write(1, buffer, index);
 	_putchar('\n');
 	return (0);
 }
