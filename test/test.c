@@ -13,6 +13,7 @@ int main(void)
 	char *s2;
 	char c;
 	int i;
+	int b;
 
 	c = 'p';
 
@@ -21,9 +22,10 @@ int main(void)
 	s = "hello";
 	s2 = "hello2";
 	
+	b = -98;
 
 	printf("asdfasdfas");
-	_printf("fasdf %s, %c, %s, %i, %b", s, c, s2, i);
+	_printf("fasdf %s, %c, %s, %i, %b", s, c, s2, i, b);
 	_printf("%b\n", 98);
 	/**
     int len;

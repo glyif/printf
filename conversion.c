@@ -54,25 +54,13 @@ long decimal_binary(unsigned int n)
 
 char *int_b_string(unsigned int n)
 {
-	int b, i;
+	int b;
 	char *s;
 
 	b = decimal_binary(n);
 	
-	s = malloc(intlen(b) * sizeof(char));
-
-	i = 0;
-
-	while (n != 0)
-	{
-		s[i] = b % 10 + '0';
-		b = b /10;
-		i++;
-	}
-
-	s[i] = '\0';
+	s = int_string(b); 
 	
-	_rev(s);
 	return(s);
 }
 	
