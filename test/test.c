@@ -21,8 +21,10 @@ int main(void)
 	s = "hello";
 	s2 = "hello2";
 	
+
 	printf("asdfasdfas");
-	_printf("fasdf %s, %c, %s, %i", s, c, s2, i);
+	_printf("fasdf %s, %c, %s, %i, %b", s, c, s2, i);
+	_printf("%b\n", 98);
 	/**
     int len;
 	int len2;

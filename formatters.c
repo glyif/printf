@@ -51,3 +51,26 @@ int buffer_int(va_list ap, char *buffer, int index)
 
 	return (index);
 }
+
+int buffer_int_b(va_list ap, char *buffer, int index)
+{
+	int i;
+	char *s;
+
+	int in;
+	in = va_arg(ap, int);
+
+	if (in < 0)
+	{
+		in = _abs(in);
+		buffer[index] = '-';
+		index++;
+	}
+
+	s = int_b_string(in);
+
+	for (i = 0; s[i] != '\0'; i++, index++)
+		buffer[index] = s[i];
+
+	return (index);
+}

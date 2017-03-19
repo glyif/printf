@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 		{"c", buffer_char},
 		{"i", buffer_int},
 		{"d", buffer_int},
+		{"b", buffer_int_b},
 		{NULL, NULL}
 	};
 
