@@ -12,13 +12,17 @@ int main(void)
 	char *s;
 	char *s2;
 	char c;
+	int i;
+
 	c = 'p';
+
+	i = 123455;
 
 	s = "hello";
 	s2 = "hello2";
 	
 	printf("asdfasdfas");
-	_printf("fasdf %s, %c, %s", s, c, s2);
+	_printf("fasdf %s, %c, %s, %i", s, c, s2, i);
 	/**
     int len;
 	int len2;

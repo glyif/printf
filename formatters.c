@@ -28,3 +28,16 @@ int buffer_char(va_list ap, char *buffer, int index)
 
 	return (index + 1);
 }
+
+int buffer_int(va_list ap, char *buffer, int index)
+{
+	int i;
+	char *s;
+
+	s = int_string(va_arg(ap, int));
+
+	for (i = 0; s[i] != '\0'; i++, index++)
+		buffer[index] = s[i];
+
+	return (index);
+}
