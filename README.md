@@ -9,6 +9,12 @@ This is a custom implementation of `printf` from the standard library `<stdio.h>
 ## File Breakdown
 
 ## Using
+```bash
+gcc -Werror -Wextra -pedantic test/test.c _printf.c formatters.c _putchar.c _strlen.c _strcopy.c -o printf
+
+./printf
+```
+
 For this command you will need to be in the `root` project folder, not the `main` folder. As you'll be compiling the `main/0-main.c` file in the `main` folder and the `0-sum_them_all.c` file in the current directory.
 
 ## TODO
