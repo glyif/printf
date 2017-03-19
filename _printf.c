@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 
 	print p[] = {
 		{"s", buffer_string},
+		{"c", buffer_char},
 		{NULL, NULL}
 	};
 

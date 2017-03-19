@@ -26,5 +26,5 @@ int buffer_char(va_list ap, char *buffer, int index)
 
 	buffer[index] = s;
 
-	return (index + 4);
+	return (index + 1);
 }

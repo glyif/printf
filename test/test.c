@@ -11,12 +11,14 @@ int main(void)
 {
 	char *s;
 	char *s2;
+	char c;
+	c = 'p';
 
 	s = "hello";
 	s2 = "hello2";
 	
 	printf("asdfasdfas");
-	_printf("fasdf %s %s", s, s2);
+	_printf("fasdf %s, %c, %s", s, c, s2);
 	/**
     int len;
 	int len2;
