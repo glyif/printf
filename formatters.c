@@ -29,7 +29,6 @@ int buffer_char(va_list ap, char *buffer, int index)
 
 int buffer_int(va_list ap, char *buffer, int index)
 {
-	int i;
 	char *s;
 	
 	int in;
@@ -44,15 +43,12 @@ int buffer_int(va_list ap, char *buffer, int index)
 
 	s = int_string(in);
 
-	for (i = 0; s[i] != '\0'; i++, index++)
-		buffer[index] = s[i];
-
+	index = _strcpy(buffer, s, index);
 	return (index);
 }
 
 int buffer_int_b(va_list ap, char *buffer, int index)
 {
-	int i;
 	char *s;
 
 	int in;
@@ -67,8 +63,7 @@ int buffer_int_b(va_list ap, char *buffer, int index)
 
 	s = int_b_string(in);
 
-	for (i = 0; s[i] != '\0'; i++, index++)
-		buffer[index] = s[i];
+	index = _strcpy(buffer, s, index);
 
 	return (index);
 }
