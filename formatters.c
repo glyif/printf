@@ -8,13 +8,11 @@
 
 int buffer_string(va_list ap, char *buffer, int index)
 {
-	int i;
 	char *s;
 	
 	s = va_arg(ap, char *);
 
-	for (i = 0; s[i] != '\0'; i++, index++)
-		buffer[index] = s[i];
+	index = _strcpy(buffer, s, index);
 
 	return (index);
 }
