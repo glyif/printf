@@ -1,0 +1,71 @@
+.TH _PRINTF 3 LOCAL
+.SH NAME
+_printf - formatted output conversion
+.SH SYNOPSIS
+.B #include 'holberton.h'
+
+\fBint _printf(const char *\fR\fIformat\fR\fB, ...);\fR
+.SH CONFIGURATION
+.SH DESCRIPTION
+The  functions in the _printf() family produce output according to a format as described below.  The functions _printf() write output to stdout, the standard output stream.
+
+.B Return value
+
+Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
+
+.B Format of the format string
+
+The format string is a character string, beginning and ending in its initial shift state, if any. The format string is composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments. Each conversion specification is introduced by the character %, and ends with a 
+.I conversion specifier
+
+.. In between there may be (in this order) zero or more flags, an optional minimum field width, an optional precision and an optional length modifier.
+.TP 5
+f1
+is one option
+.TP
+f2
+is another option
+.TP
+f2
+is another option
+.TP
+f2
+is another option
+.TP
+f2
+is another option
+.TP
+f2
+is another option
+.TP
+f2
+is another option
+.P
+This is another paragraph with an example:
+.br
+.nf
+
+sillycommand "with option"
+
+.fi
+.SH OPTIONS
+.TP
+.I -r
+option options options
+.TP
+.I -n
+more fucking options on top of options
+.SH OPTIONS
+.SH EXIT STATUS
+.SH RETURN VALUE
+.SH ERRORS
+.SH ENVIRONMENT
+.SH FILES
+.SH VERSIONS
+.SH CONFORMING TO
+.SH NOTES
+.SH BUGS
+.SH REPORTING BUGS
+.SH EXAMPLE
+.SH AUTHORS
+.SH SEE ALSO
