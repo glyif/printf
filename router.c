@@ -9,6 +9,7 @@ int (*router(char fmt))(va_list, char *, int)
 		{'i', buffer_int},
 		{'d', buffer_int},
 		{'b', buffer_int_b},
+		{'%', buffer_int_per),
 		{'\0', NULL}
 	};
 
@@ -18,7 +19,6 @@ int (*router(char fmt))(va_list, char *, int)
 	{
 		if (router[i].c == fmt)
 			return (router[i].f);
-		
 		i++;
 	}
 

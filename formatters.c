@@ -9,7 +9,7 @@
 int buffer_string(va_list ap, char *buffer, int index)
 {
 	char *s;
-	
+
 	s = va_arg(ap, char *);
 
 	index = _strcpy(buffer, s, index);
@@ -30,10 +30,10 @@ int buffer_char(va_list ap, char *buffer, int index)
 int buffer_int(va_list ap, char *buffer, int index)
 {
 	char *s;
-	
+
 	int in;
 	in = va_arg(ap, int);
-	
+
 	if (in < 0)
 	{
 		index = buffer_check(buffer, index);
