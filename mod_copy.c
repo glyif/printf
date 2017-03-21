@@ -4,50 +4,44 @@
 char **mod_copy(char *s, int len)
 {
     char **mod;
-    int j, c, i, p;
+    int j, c, i, p, f;
     int result;
 
-    mod = malloc(sizeof(*mod) * 5);
-	
-	mod[5] = malloc(sizeof(char) * 1);
-	mod[5][0] = s[len];
+    mod = malloc(sizeof(*mod) * 6);
 
-	i = c = j = p = 0;
+        mod[5] = malloc(sizeof(char) * 1);
+        mod[5][0] = s[len];
 
-	while (i < len)
-	{
-		if (check_flag(s[i]) == 1 && p == 0)
-		{
-			mod[0] = malloc(6);
-			reset_buffer(mod[0], 6);
+        i = c = f = p = 0;
 
-			for (j = i, c = 0; s[j] != '.' && s[j] != 'h' && s[j] != 'l' && s[j] != s[len] && s[j] != '\0'; j++, c++)
-				mod[0][c] = s[j];
-				
-			j = 0;
-			c = 0;
+        while (i < len)
+        {
 
-			i++;
-		}
+                if (check_flag(s[i]) == 1 && p == 0)
+                {
+                        mod[0] = malloc(6);
+                        reset_buffer(mod[0], 6);
 
-    	if (_isdigit(s[i]) == 1 && p == 0)
-    	{
-			mod[1] = malloc(10);
-			reset_buffer(mod[1], 10);
-		
-			for (j = i, c = 0; s[j] != '.' && s[j] != 'h' && s[j] != 'l' && s[j] != s[len] && s[j] != '\0'; j++, c++)
-            	mod[1][c] = s[j];
+                        mod[0][c] = s[i];
+                        c++;
+                        i++;
+                }
 
-			j = 0;
-			c = 0;
-	
-			i++;
-    	}
+        if (_isdigit(s[i]) == 1 && p == 0)
+        {
+                        mod[1] = malloc(10);
+                        reset_buffer(mod[1], 10);
 
+            mod[1][f] = s[i];
+                        printf("%c", mod[1][f]);
+                        f++;
+                        i++;
+        }
 
-	}
+                i++;
+        }
 
-	printf("%s", mod[0]);
-		
+        printf("%s", mod[0]);
+
     return (mod);
 }

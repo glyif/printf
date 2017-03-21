@@ -50,10 +50,10 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
+				filter_format(format);
 				tmpfmt = _parse((char *)(format), i + 1);
 				printf("%s", tmpfmt);
 				templen = _strlen(tmpfmt) - 1;
-				modifier = mod_copy(tmpfmt, templen);
 				printf("%s\n", modifier[0]);
 				printf("%s\n", modifier[1]);
 				/* modifier = check_modifiers(tmpfmt, templen);*/
