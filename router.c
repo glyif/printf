@@ -9,6 +9,7 @@ int (*router(char fmt))(va_list, char *, int)
 		{'i', buffer_int},
 		{'d', buffer_int},
 		{'b', buffer_int_b},
+		{'u', buffer_int_u},
 		{'\0', NULL}
 	};
 

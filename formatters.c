@@ -69,3 +69,17 @@ int buffer_int_b(va_list ap, char *buffer, int index)
 
 	return (index);
 }
+
+int buffer_int_u(va_list ap, char *buffer, int index)
+{
+	char *s;
+	int in;
+
+	in = va_arg(ap, int);
+
+	s = int_hex(in);
+
+	index = _strcpy(buffer, s, index);
+
+	return (index);
+}

@@ -32,6 +32,33 @@ char *int_string(int n)
 	return(s);
 }
 
+char *int_hex(int n)
+{
+	char *s;
+
+	int temp, i;
+
+	i = 0;
+
+	s = malloc(sizeof(char) * 30);
+	
+	while (n != 0)
+	{
+		temp = n % 16;
+		if (temp < 10)
+			temp += '0';
+		else
+			temp += 'a' - 10;
+		i++;
+		s[i] = temp;
+		n = n / 16;
+	}
+
+	s[i] = '\0';
+	_rev(s);
+	return (s);
+}
+
 long decimal_binary(unsigned int n)
 {
 	int remainder;
@@ -63,4 +90,3 @@ char *int_b_string(unsigned int n)
 	
 	return(s);
 }
-	

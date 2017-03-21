@@ -9,6 +9,7 @@ int _strcpy(char *buffer, char *from, int index);
 char *int_string(int n);
 char *int_b_string(unsigned int n);
 long decimal_binary(unsigned int n);
+char *int_hex(int n);
 void _rev(char *s);
 int intlen(int n);
 int _abs(int n);
@@ -19,6 +20,7 @@ int buffer_string(va_list ap, char *buffer, int index);
 int buffer_char(va_list ap, char *buffer, int index);
 int buffer_int(va_list ap, char *buffer, int index);
 int buffer_int_b(va_list ap, char *buffer, int index);
+int buffer_int_u(va_list ap, char *buffer, int index);
 void reset_buffer(char *buffer, int size);
 int buffer_check(char *buffer, int index);
 #endif
