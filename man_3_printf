@@ -9,11 +9,34 @@ _printf - formatted output conversion
 
 .BR int _printf(code in here)
 .SH DESCRIPTION
-The  functions in the _printf() family produce output according to a format as described below.  The functions _printf() write output to stdout, the standard output stream.
+The  functions in the
+.BR _printf()
+family produce output according to a format as described below.  The functions
+.BR _printf()
+write output to stdout, the standard output stream.
 
 .SS Format of the format string
-
-The format string is a character string, beginning and ending in its initial shift state, if any. The format string is composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments. Each conversion specification is introduced by the character %, and ends with a conversion specifier. In between there may be (in this order) zero or more flags, an optional minimum field width, an optional precision and an optional length modifier.
+.SS Format of the format string
+The format string is a character string, beginning and ending
+in its initial shift state, if any.
+The format string is composed of zero or more directives: ordinary
+characters (not
+.BR % ),
+which are copied unchanged to the output stream;
+and conversion specifications, each of which results in fetching zero or
+more subsequent arguments.
+Each conversion specification is introduced by
+the character
+.BR % ,
+and ends with a
+.IR "conversion specifier" .
+.IR flags ,
+an optional minimum
+.IR "field width" ,
+an optional
+.I precision
+and an optional
+.IR "length modifier" .
 
 .SS Conversion specifiers
 .TP
@@ -108,12 +131,15 @@ Holberton School is a project-based alternative to college for the next generati
 At Holberton School, there are no formal teachers and no formal courses. Instead, everything is project centered. We give our students increasingly difficult programming challenges to solve, and give them minimal initial directions on how to solve them. As a consequence, students naturally look for the theory and tools they need, understand them, use them, work together, and help each other.
 
 .SH BUGS
+.PS
+.SM
  █████╗ ██╗     ██╗         ███╗   ███╗███████╗███╗   ██╗    ███╗   ███╗██╗   ██╗███████╗████████╗    ██████╗ ██╗███████╗
 ██╔══██╗██║     ██║         ████╗ ████║██╔════╝████╗  ██║    ████╗ ████║██║   ██║██╔════╝╚══██╔══╝    ██╔══██╗██║██╔════╝
 ███████║██║     ██║         ██╔████╔██║█████╗  ██╔██╗ ██║    ██╔████╔██║██║   ██║███████╗   ██║       ██║  ██║██║█████╗  
 ██╔══██║██║     ██║         ██║╚██╔╝██║██╔══╝  ██║╚██╗██║    ██║╚██╔╝██║██║   ██║╚════██║   ██║       ██║  ██║██║██╔══╝  
 ██║  ██║███████╗███████╗    ██║ ╚═╝ ██║███████╗██║ ╚████║    ██║ ╚═╝ ██║╚██████╔╝███████║   ██║       ██████╔╝██║███████╗
 ╚═╝  ╚═╝╚══════╝╚══════╝    ╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝    ╚═╝     ╚═╝ ╚═════╝ ╚══════╝   ╚═╝       ╚═════╝ ╚═╝╚══════╝
+.PE
 .ce
 (...writing _printf)
 .SH EXAMPLE
