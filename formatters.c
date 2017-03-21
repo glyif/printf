@@ -69,3 +69,13 @@ int buffer_int_b(va_list ap, char *buffer, int index)
 
 	return (index);
 }
+
+int buffer_percent(va_list ap, char *s, int index)
+{
+	char s;
+
+	s = va_arg(ap, int);
+	s[index] = "%";
+
+	return (index + 1);
+}
