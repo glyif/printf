@@ -28,11 +28,10 @@ int main(void)
 	s3 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in vehicula ipsum. Aliquam sit amet aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus venenatis euismod nibh, eget elementum metus fringilla a. Ut tincidunt auctor posuere. Phasellus quis neque metus. Nam in justo ut sapien blandit auctor sed at neque. In aliquam molestie egestas. Donec ac urna auctor, sollicitudin purus et, eleifend tellus. Cras ultricies massa nunc.";
 
 	s4 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in vehicula ipsum. Aliquam sit amet aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus venenatis euismod nibh, eget elementum metus fringilla a. Ut tincidunt auctor posuere. Phasellus quis neque metus. Nam in justo ut sapien blandit auctor sed at neque. In aliquam molestie egestas. Donec ac urna auctor, sollicitudin purus et, eleifend tellus. Cras ultricies massa nunc.";
-	
+
 	b = -98;
 
-	printf("asdfasdfas");
-	_printf("fasdf %s, %c, %s, %s, %s, %i, %b", s, c, s2, s3, s4, i, b);
+	_printf("fasdf %s, %c, %s, %s, %s, %i, %b, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s", s, c, s2, s3, s4, i, b, s2, s2, s2, s2, s2, s2, s2, s2, s2, s2, s2);
 	_printf("%b\n", 98);
 	/**
     int len;
