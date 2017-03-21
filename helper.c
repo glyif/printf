@@ -22,7 +22,8 @@ int _strcpy(char *buffer, char *from, int index)
 		i++;
 		index++;
 	}
-
+	
+	buffer[i] = '\0';
 	return (index);
 }
 
@@ -101,4 +102,23 @@ int negative_copy(char *buffer, int index)
 	index++;
 
 	return (index);
+}
+
+/**
+ * _isalpha - checks if character is a letter
+ * @c: the character
+ *
+ * Return: 1 if c is a letter, 0 otherwise
+ */
+
+int _isalpha(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

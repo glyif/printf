@@ -1,8 +1,10 @@
 #include <stdarg.h>
+#include <string.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * print_all - prints anything
@@ -13,11 +15,14 @@
 
 int _printf(const char *format, ...)
 {
-	int i;
+	int i, j, templen;
 	int index;
+	char *cpy;
+	char *tmpfmt;
 	int (*routing)(va_list, char *, int);
-
+	
 	char buffer[1024];
+	reset_buffer(buffer, 1024);
 	va_list ap;
 
 	i = 0;
@@ -34,8 +39,12 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%')
 		{
-			routing = router(format[i + 1]);
+
+			tmpfmt = _parse((char *)(format), i + 1);
+			templen = _strlen(tmpfmt) - 1;
+			routing = router(tmpfmt[templen]);
 			index = routing(ap, buffer, index);
+
 		}
 
 		i++;

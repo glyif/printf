@@ -28,7 +28,7 @@ int main(void)
 	s3 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in vehicula ipsum. Aliquam sit amet aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus venenatis euismod nibh, eget elementum metus fringilla a. Ut tincidunt auctor posuere. Phasellus quis neque metus. Nam in justo ut sapien blandit auctor sed at neque. In aliquam molestie egestas. Donec ac urna auctor, sollicitudin purus et, eleifend tellus. Cras ultricies massa nunc.";
 
 	s4 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in vehicula ipsum. Aliquam sit amet aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus venenatis euismod nibh, eget elementum metus fringilla a. Ut tincidunt auctor posuere. Phasellus quis neque metus. Nam in justo ut sapien blandit auctor sed at neque. In aliquam molestie egestas. Donec ac urna auctor, sollicitudin purus et, eleifend tellus. Cras ultricies massa nunc.";
-	
+
 	b = -98;
 
 	printf("asdfasdfas\n");
