@@ -1,17 +1,15 @@
-.TH _PRINTF 3 LOCAL
+.TH _PRINTF 3 "20 MAR 2017" LOCAL "HOLBERTON SCHOOL BATCH 2"
 .SH NAME
 _printf - formatted output conversion
 .SH SYNOPSIS
 .B #include 'holberton.h'
 
 \fBint _printf(const char *\fR\fIformat\fR\fB, ...);\fR
-.SH CONFIGURATION
+
+
+.BR int _printf(code in here)
 .SH DESCRIPTION
 The  functions in the _printf() family produce output according to a format as described below.  The functions _printf() write output to stdout, the standard output stream.
-
-.B Return value
-
-Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
 
 .B Format of the format string
 
@@ -19,6 +17,7 @@ The format string is a character string, beginning and ending in its initial shi
 .I conversion specifier
 
 .. In between there may be (in this order) zero or more flags, an optional minimum field width, an optional precision and an optional length modifier.
+.SH OPTIONS
 .TP 5
 f1
 is one option
@@ -48,7 +47,6 @@ This is another paragraph with an example:
 sillycommand "with option"
 
 .fi
-.SH OPTIONS
 .TP
 .I -r
 option options options
@@ -58,14 +56,49 @@ more fucking options on top of options
 .SH OPTIONS
 .SH EXIT STATUS
 .SH RETURN VALUE
+Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
 .SH ERRORS
 .SH ENVIRONMENT
 .SH FILES
 .SH VERSIONS
 .SH CONFORMING TO
 .SH NOTES
+This is a group project completed for
+.UR https://www.holbertonschool.com/
+Holberton School
+.UE .
+.SS About Holberton School
+Holberton School is a project-based alternative to college for the next generation of software engineers. Using project-based learning and peer learning, our mission is to train the best software engineers of their generation.
+
+At Holberton School, there are no formal teachers and no formal courses. Instead, everything is project centered. We give our students increasingly difficult programming challenges to solve, and give them minimal initial directions on how to solve them. As a consequence, students naturally look for the theory and tools they need, understand them, use them, work together, and help each other.
+   
+
 .SH BUGS
-.SH REPORTING BUGS
+.SH  █████╗ ██╗     ██╗         ███╗   ███╗███████╗███╗   ██╗    ███╗   ███╗██╗   ██╗███████╗████████╗    ██████╗ ██╗███████╗
+.SH ██╔══██╗██║     ██║         ████╗ ████║██╔════╝████╗  ██║    ████╗ ████║██║   ██║██╔════╝╚══██╔══╝    ██╔══██╗██║██╔════╝
+.SH ███████║██║     ██║         ██╔████╔██║█████╗  ██╔██╗ ██║    ██╔████╔██║██║   ██║███████╗   ██║       ██║  ██║██║█████╗  
+.SH ██╔══██║██║     ██║         ██║╚██╔╝██║██╔══╝  ██║╚██╗██║    ██║╚██╔╝██║██║   ██║╚════██║   ██║       ██║  ██║██║██╔══╝  
+.SH ██║  ██║███████╗███████╗    ██║ ╚═╝ ██║███████╗██║ ╚████║    ██║ ╚═╝ ██║╚██████╔╝███████║   ██║       ██████╔╝██║███████╗
+.SH ╚═╝  ╚═╝╚══════╝╚══════╝    ╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝    ╚═╝     ╚═╝ ╚═════╝ ╚══════╝   ╚═╝       ╚═════╝ ╚═╝╚══════╝
+                                                                                                                         
 .SH EXAMPLE
 .SH AUTHORS
+.SS Bobby Yang
+.UR https://github.com/glyif/
+Github
+.UE
+
+.UR https://twitter.com/bobstermyang
+Twitter
+.UE
+
+.SS Elaine Yeung
+.UR https://github.com/yeungegs/
+Github
+.UE
+
+.UR https://twitter.com/egsy
+Twitter
+.UE
 .SH SEE ALSO
+printf
