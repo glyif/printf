@@ -1,0 +1,82 @@
+test/test.c: In function ‘buffer_percent’:
+test/test.c:11:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+test/test.c:73:1: error: expected ‘{’ at end of input
+ }
+ ^
+conversion.c: In function ‘buffer_percent’:
+conversion.c:4:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+conversion.c:36:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+conversion.c:56:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+conversion.c:65:1: error: expected ‘{’ at end of input
+ }
+ ^
+helper.c: In function ‘buffer_percent’:
+helper.c:12:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+helper.c:37:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+helper.c:52:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+helper.c:76:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+helper.c:99:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+helper.c:104:1: error: expected ‘{’ at end of input
+ }
+ ^
+buffer.c: In function ‘buffer_percent’:
+buffer.c:12:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+buffer.c:24:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+buffer.c:29:1: error: expected ‘{’ at end of input
+ }
+ ^
+formatters.c: In function ‘buffer_percent’:
+formatters.c:10:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+formatters.c:21:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+formatters.c:31:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+formatters.c:51:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+formatters.c:74:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+formatters.c:79:1: error: expected ‘{’ at end of input
+ }
+ ^
+_printf.c: In function ‘buffer_percent’:
+_printf.c:15:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+_printf.c:48:1: error: expected ‘{’ at end of input
+ }
+ ^
+router.c: In function ‘buffer_percent’:
+router.c:10:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ {
+ ^
+router.c:32:1: error: expected ‘{’ at end of input
+ }
+ ^

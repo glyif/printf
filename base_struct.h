@@ -8,5 +8,5 @@
 typedef struct routes
 {
 	char c;
-	int (*f)(va_list, char *, int);
+	int (*f)();
 } routes;
