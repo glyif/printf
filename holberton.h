@@ -23,4 +23,9 @@ void reset_buffer(char *buffer, int size);
 int buffer_check(char *buffer, int index);
 char *_parse(char *s, int start);
 int _isalpha(int c);
+int _isdigit(int c);
+/* mod checks */
+int check_flag(char s);
+/* mod copy */
+char **check_modifiers(char *s, int len);
 #endif

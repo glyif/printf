@@ -5,8 +5,10 @@
  *
  */
 
-typedef struct routes
+struct routes
 {
 	char c;
 	int (*f)(va_list, char *, int);
-} routes;
+};
+
+typedef struct routes routes;
