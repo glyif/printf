@@ -21,16 +21,16 @@ int _printf(const char *format, ...)
 	char *cpy;
 	char *tmpfmt;
 	char **modifier;
-	/* int (*routing)(va_list, char *, int); */
+	int (*routing)(va_list, char *, int);
 	
 	char buffer[1024];
 	p = '%';
-	/* va_list ap; */
+	va_list ap;
 
 	i = 0;
 	index = 0;
 
-	/* va_start(ap, format); */
+	va_start(ap, format);
 
 	while (format != NULL && format[i] != '\0')
 	{
@@ -50,22 +50,19 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				filter_format(format);
 				tmpfmt = _parse((char *)(format), i + 1);
-				printf("%s", tmpfmt);
 				templen = _strlen(tmpfmt) - 1;
-				printf("%s\n", modifier[0]);
-				printf("%s\n", modifier[1]);
-				/* modifier = check_modifiers(tmpfmt, templen);*/
-				/* routing = router(tmpfmt[templen]);
-				index = routing(ap, buffer, index); */
+				modifier = _mod_copy(tmpfmt, templen);
+				applied = apply_mod(modifier, format);
+				routing = router(tmpfmt[templen]);
+				index = routing(ap, buffer, index);
 			}
 		}
 
 		i++;
 			
 	}
-	/* va_end(ap); */
+	va_end(ap);
 
 	write(1, buffer, index);
 	return (index);

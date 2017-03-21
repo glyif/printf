@@ -137,3 +137,16 @@ int _isdigit(int c)
 	else
 		return (0);
 }
+
+int to_int(char *s)
+{
+	int i;
+	int result;
+	
+	result = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+        result = result * 10 + (s[i] - '0');
+
+        return (result);
+}

@@ -27,5 +27,6 @@ int _isdigit(int c);
 /* mod checks */
 int check_flag(char s);
 /* mod copy */
-char **check_modifiers(char *s, int len);
+char **_mod_copy(char *s, int len);
+int to_int(char *s);
 #endif

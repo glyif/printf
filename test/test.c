@@ -10,12 +10,15 @@
 int main(void)
 {
 	char *s;
+	char *shor;
 	char *s2;
 	char *s3;
 	char *s4;
 	char c;
 	int i;
 	int b;
+
+	shor = "hi";
 
 	c = 'p';
 
@@ -32,9 +35,11 @@ int main(void)
 	b = -98;
 
 	printf("asdfasdfas\n");
-	_printf("fasdf %s, %c, %s, %s, %s, %i, %b\n", s, c, s2, s3, s4, i, b);
+	_printf("fasdf %+s, %c, %s, %s, %s, %i, %b\n", s, c, s2, s3, s4, i, b);
 	_printf("%b\n", 98);
 	_printf("%%");
+	_printf("%+d\n", b);
+	printf("%+d\n", b);
 	/**
     int len;
 	int len2;
