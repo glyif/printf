@@ -34,7 +34,7 @@ int main(void)
 	printf("asdfasdfas\n");
 	_printf("fasdf %s, %c, %s, %s, %s, %i, %b\n", s, c, s2, s3, s4, i, b);
 	_printf("%b\n", 98);
-	_printf("%%\n");
+	_printf("%%");
 	/**
     int len;
 	int len2;

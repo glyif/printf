@@ -17,12 +17,13 @@ int _printf(const char *format, ...)
 {
 	int i, j, templen;
 	int index;
+	char p;
 	char *cpy;
 	char *tmpfmt;
 	int (*routing)(va_list, char *, int);
 	
 	char buffer[1024];
-	reset_buffer(buffer, 1024);
+	p = '%';
 	va_list ap;
 
 	i = 0;
@@ -32,19 +33,27 @@ int _printf(const char *format, ...)
 
 	while (format != NULL && format[i] != '\0')
 	{
+		
 		if (format[i] != '%' && format[i - 1] != '%')
 		{
 			buffer[index] = format[i];
 			index++;
 		}
-		else if (format[i] == '%')
+		else if(format[i] == '%')
 		{
-
-			tmpfmt = _parse((char *)(format), i + 1);
-			templen = _strlen(tmpfmt) - 1;
-			routing = router(tmpfmt[templen]);
-			index = routing(ap, buffer, index);
-
+			if (format[i + 1] == '%')
+			{
+				buffer[index] = p;
+				index++;
+				break;
+			}
+			else
+			{
+				tmpfmt = _parse((char *)(format), i + 1);
+				templen = _strlen(tmpfmt) - 1;
+				routing = router(tmpfmt[templen]);
+				index = routing(ap, buffer, index);
+			}
 		}
 
 		i++;

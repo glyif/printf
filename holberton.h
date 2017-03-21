@@ -19,7 +19,6 @@ int buffer_string(va_list ap, char *buffer, int index);
 int buffer_char(va_list ap, char *buffer, int index);
 int buffer_int(va_list ap, char *buffer, int index);
 int buffer_int_b(va_list ap, char *buffer, int index);
-int buffer_percent(char *buffer, int index);
 void reset_buffer(char *buffer, int size);
 int buffer_check(char *buffer, int index);
 char *_parse(char *s, int start);
