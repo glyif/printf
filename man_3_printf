@@ -1,19 +1,17 @@
 .TH _PRINTF 3 "20 MAR 2017" LOCAL "HOLBERTON SCHOOL BATCH 2"
 .SH NAME
-_printf - formatted output conversion
+_printf \- formatted output conversion
 .SH SYNOPSIS
-.B #include 'holberton.h'
+.B #include "holberton.h"
 
 \fBint _printf(const char *\fR\fIformat\fR\fB, ...);\fR
 
-.BR int _printf(code in here)
-
 .SH DESCRIPTION
-The  functions in the
+The
 .BR _printf()
-family produce output according to a format as described below.  The functions
+function produces output according to a format as described below. The
 .BR _printf()
-write output to stdout, the standard output stream.
+function writes output to stdout, the standard output stream.
 
 .SS Format of the format string
 The format string is a character string, beginning and ending
@@ -39,8 +37,6 @@ and an optional
 .IR "length modifier" .
 
 .SS Conversion specifiers
-%f print a floating-point number
-%g print a general-format floating-point number
 .TP
 c
 print a single character
@@ -49,7 +45,7 @@ s
 print a string of characters
 .TP
 %
-print a percent sign (\% also works)
+print a percent sign (\\% also works)
 .TP
 d
 print a decimal (base 10) number
@@ -173,54 +169,125 @@ A
 .B +
 overrides a space if both are used.
 .PP
-The five flag characters above are defined in the C standard.
-
-.TP
-X
-.TP
-S
-.TP
-.TP
-p
-.TP
-l
-.TP
-h
+.\"The five flag characters above are defined in the C standard.
+.\"
+.\".TP
+.\"X
+.\".TP
+.\"S
+.\".TP
+.\".TP
+.\"p
+.\".TP
+.\"l
+.\".TP
+.\"h
 
 .SH RETURN VALUE
 Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
-.SH ERRORS
+.\".SH ERRORS
 .SH NOTES
+.PP
 This is a group project completed for
 .UR https://www.holbertonschool.com/
 Holberton School
 .UE .
+This custom implementation of
+.B printf
+from the standard library represents an application of all C programming knowledge that students have acquired since starting at Holberton School on January 30, 2017.
 .SS About Holberton School
 Holberton School is a project-based alternative to college for the next generation of software engineers. Using project-based learning and peer learning, our mission is to train the best software engineers of their generation.
 
 At Holberton School, there are no formal teachers and no formal courses. Instead, everything is project centered. We give our students increasingly difficult programming challenges to solve, and give them minimal initial directions on how to solve them. As a consequence, students naturally look for the theory and tools they need, understand them, use them, work together, and help each other.
 
 .SH BUGS
-Report _printf bugs to bug\-coreutils@gnu.org
-.br
-GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
-.br
-General help using GNU software: <http://www.gnu.org/gethelp/>
-.br
-Report printf translation bugs to <http://translationproject.org/team/>
+Report _printf bugs to authors (contact information listed below)
+.\".br
+.\".br
+.\"Report printf translation bugs to <http://translationproject.org/team/>
 .SH EXAMPLE
+.PP
 To print
-.I Pi
-to five decimal places:
+.I negative signed integer
+:
 .in +4n
 .nf
-
-#include <math.h>
-#include <stdio.h>
-fprintf(stdout, "pi = %.5f\en", 4 * atan(1.0));
 .fi
 .in
+    _printf("Negative:[%d]\n", -762534);
+.PP
+To print
+.I unsigned integer
+:
+.in +4n
+.nf
+.fi
+.in
+    _printf("Unsigned:[%u]\n", ui);
+.PP
+To print
+.I unsigned octal
+:
+.in +4n
+.nf
+.fi
+.in
+    _printf("Unsigned octal:[%o]\n", ui);
+.PP
+To print
+.I unsigned hexadecimal
+:
+.in +4n
+.nf
+.fi
+.in
+    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+.PP
+To print
+.I character
+:
+.in +4n
+.nf
+.fi
+.in
+    _printf("Character:[%c]\n", 'H');
+.PP
+To print
+.I string
+:
+.in +4n
+.nf
+.fi
+.in
+    _printf("String:[%s]\n", "I am a string !");
+.PP
+To print
+.I pointer address
+:
+.in +4n
+.nf
+.fi
+.in
+    _printf("Address:[%p]\n", addr);
+
 .SH AUTHORS
+.SS Bobby Yang
+.UR https://github.com/glyif/
+Github
+.UE
+
+.UR https://twitter.com/bobstermyang
+Twitter
+.UE
+
+.SS Elaine Yeung
+.UR https://github.com/yeungegs/
+Github
+.UE
+
+.UR https://twitter.com/egsy
+Twitter
+.UE
 .TS
 center, box invis, tab(:);
 l s
@@ -254,23 +321,6 @@ l.
 .ce
 (...while writing _printf)
 
-.SS Bobby Yang
-.UR https://github.com/glyif/
-Github
-.UE
-
-.UR https://twitter.com/bobstermyang
-Twitter
-.UE
-
-.SS Elaine Yeung
-.UR https://github.com/yeungegs/
-Github
-.UE
-
-.UR https://twitter.com/egsy
-Twitter
-.UE
 .SH SEE ALSO
 .BR printf (1),
 .BR printf (3)
