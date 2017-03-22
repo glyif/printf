@@ -55,4 +55,4 @@ When Elaine asked Bobby the reason why she was the "mother of dragons" he stated
 d output to strings)
 - [ ] Get [@Julien Barbier](https://github.com/jbarbier) to say I did a good job ;)
 
-![image](https://cloud.githubusercontent.com/assets/23224088/24169948/6014c632-0e3c-11e7-9a20-1b8ae88d1281.jpg)
+![image](https://cloud.githubusercontent.com/assets/23224088/24182203/55307342-0e7d-11e7-85cc-22c9189f8d13.jpg)
