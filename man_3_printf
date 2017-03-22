@@ -6,7 +6,6 @@ _printf - formatted output conversion
 
 \fBint _printf(const char *\fR\fIformat\fR\fB, ...);\fR
 
-
 .BR int _printf(code in here)
 
 .SH DESCRIPTION
@@ -188,35 +187,9 @@ l
 .TP
 h
 
-
-
-.SH OPTIONS
-.TP 5
-f1
-is one option
-.TP
-f2
-is another option
-.TP
-f2
-is another option
-.nf
-
-.fi
-.TP
-.I -r
-option options options
-.TP
-.I -n
-more fucking options on top of options
-.SH EXIT STATUS
 .SH RETURN VALUE
 Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
 .SH ERRORS
-.SH ENVIRONMENT
-.SH FILES
-.SH VERSIONS
-.SH CONFORMING TO
 .SH NOTES
 This is a group project completed for
 .UR https://www.holbertonschool.com/
