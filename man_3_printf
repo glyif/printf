@@ -39,13 +39,9 @@ an optional
 and an optional
 .IR "length modifier" .
 
-.SS Conversion specifiers 
-%e print an exponential floating-point number
+.SS Conversion specifiers
 %f print a floating-point number
 %g print a general-format floating-point number
-%o print a number in octal (base 8)
-%s print a string of characters
-%x print a number in hexidecimal (base 16)
 .TP
 c
 print a single character
@@ -69,8 +65,117 @@ u
 print an unsigned decimal (base 10) number
 .TP
 o
+print a number in octal (base 8)
 .TP
 x
+print a number in hexidecimal (base 16)
+
+.SS The flag characters
+The character % is followed by zero or more of the following flags:
+.TP
+.B #
+The value should be converted to an "alternate form".
+For
+.B o
+conversions, the first character of the output string is made zero
+(by prefixing a 0 if it was not zero already).
+For
+.B x
+and
+.B X
+conversions, a nonzero result has the string "0x" (or "0X" for
+.B X
+conversions) prepended to it.
+For
+.BR a ,
+.BR A ,
+.BR e ,
+.BR E ,
+.BR f ,
+.BR F ,
+.BR g ,
+and
+.B G
+conversions, the result will always contain a decimal point, even if no
+digits follow it (normally, a decimal point appears in the results of th\
+ose
+conversions only if a digit follows).
+For
+.B g
+and
+.B G
+conversions, trailing zeros are not removed from the result as they woul\
+d
+otherwise be.
+For other conversions, the result is undefined.
+.TP
+.B \&0
+The value should be zero padded.
+For
+.BR d ,
+.BR i ,
+.BR o ,
+.BR u ,
+.BR x ,
+.BR X ,
+.BR a ,
+.BR A ,
+.BR e ,
+.BR E ,
+.BR f ,
+.BR F ,
+.BR g ,
+and
+.B G
+conversions, the converted value is padded on the left with zeros rather
+than blanks.
+If the
+.B \&0
+and
+.B \-
+flags both appear, the
+.B \&0
+flag is ignored.
+If a precision is given with a numeric conversion
+.RB ( d ,
+.BR i ,
+.BR o ,
+.BR u ,
+.BR x ,
+and
+.BR X ),
+the
+.B \&0
+flag is ignored.
+For other conversions, the behavior is undefined.
+.TP
+.B \-
+The converted value is to be left adjusted on the field boundary.
+(The default is right justification.)
+Except for
+.B n
+conversions, the converted value is padded on the right with blanks, rat\
+her
+than on the left with blanks or zeros.
+A
+.B \-
+overrides a
+.B \&0
+if both are given.
+.TP
+.B \(aq \(aq
+(a space) A blank should be left before a positive number
+(or empty string) produced by a signed conversion.
+.TP
+.B +
+A sign (+ or \-) should always be placed before a number produced by a signed conversion.
+By default a sign is used only for negative numbers.
+A
+.B +
+overrides a space if both are used.
+.PP
+The five flag characters above are defined in the C standard.
+
 .TP
 X
 .TP
