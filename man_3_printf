@@ -8,6 +8,7 @@ _printf - formatted output conversion
 
 
 .BR int _printf(code in here)
+
 .SH DESCRIPTION
 The  functions in the
 .BR _printf()
@@ -15,7 +16,6 @@ family produce output according to a format as described below.  The functions
 .BR _printf()
 write output to stdout, the standard output stream.
 
-.SS Format of the format string
 .SS Format of the format string
 The format string is a character string, beginning and ending
 in its initial shift state, if any.
@@ -25,6 +25,7 @@ characters (not
 which are copied unchanged to the output stream;
 and conversion specifications, each of which results in fetching zero or
 more subsequent arguments.
+.sp
 Each conversion specification is introduced by
 the character
 .BR % ,
@@ -38,27 +39,34 @@ an optional
 and an optional
 .IR "length modifier" .
 
-.SS Conversion specifiers
+.SS Conversion specifiers 
+%e print an exponential floating-point number
+%f print a floating-point number
+%g print a general-format floating-point number
+%o print a number in octal (base 8)
+%s print a string of characters
+%x print a number in hexidecimal (base 16)
 .TP
 c
-description
+print a single character
 .TP
 s
-desc
+print a string of characters
 .TP
 %
-desc
+print a percent sign (\% also works)
 .TP
 d
-description
+print a decimal (base 10) number
 .TP
 i
-integer
+print an integer in base 10
 .TP
 b
 unsigned int argument is converted to binary
 .TP
 u
+print an unsigned decimal (base 10) number
 .TP
 o
 .TP
@@ -75,6 +83,8 @@ l
 .TP
 h
 
+
+
 .SH OPTIONS
 .TP 5
 f1
@@ -85,24 +95,7 @@ is another option
 .TP
 f2
 is another option
-.TP
-f2
-is another option
-.TP
-f2
-is another option
-.TP
-f2
-is another option
-.TP
-f2
-is another option
-.P
-This is another paragraph with an example:
-.br
 .nf
-
-sillycommand "with option"
 
 .fi
 .TP
@@ -111,7 +104,6 @@ option options options
 .TP
 .I -n
 more fucking options on top of options
-.SH OPTIONS
 .SH EXIT STATUS
 .SH RETURN VALUE
 Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
@@ -131,19 +123,59 @@ Holberton School is a project-based alternative to college for the next generati
 At Holberton School, there are no formal teachers and no formal courses. Instead, everything is project centered. We give our students increasingly difficult programming challenges to solve, and give them minimal initial directions on how to solve them. As a consequence, students naturally look for the theory and tools they need, understand them, use them, work together, and help each other.
 
 .SH BUGS
-.PS
-.SM
- █████╗ ██╗     ██╗         ███╗   ███╗███████╗███╗   ██╗    ███╗   ███╗██╗   ██╗███████╗████████╗    ██████╗ ██╗███████╗
-██╔══██╗██║     ██║         ████╗ ████║██╔════╝████╗  ██║    ████╗ ████║██║   ██║██╔════╝╚══██╔══╝    ██╔══██╗██║██╔════╝
-███████║██║     ██║         ██╔████╔██║█████╗  ██╔██╗ ██║    ██╔████╔██║██║   ██║███████╗   ██║       ██║  ██║██║█████╗  
-██╔══██║██║     ██║         ██║╚██╔╝██║██╔══╝  ██║╚██╗██║    ██║╚██╔╝██║██║   ██║╚════██║   ██║       ██║  ██║██║██╔══╝  
-██║  ██║███████╗███████╗    ██║ ╚═╝ ██║███████╗██║ ╚████║    ██║ ╚═╝ ██║╚██████╔╝███████║   ██║       ██████╔╝██║███████╗
-╚═╝  ╚═╝╚══════╝╚══════╝    ╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝    ╚═╝     ╚═╝ ╚═════╝ ╚══════╝   ╚═╝       ╚═════╝ ╚═╝╚══════╝
-.PE
-.ce
-(...writing _printf)
+Report _printf bugs to bug\-coreutils@gnu.org
+.br
+GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+.br
+General help using GNU software: <http://www.gnu.org/gethelp/>
+.br
+Report printf translation bugs to <http://translationproject.org/team/>
 .SH EXAMPLE
+To print
+.I Pi
+to five decimal places:
+.in +4n
+.nf
+
+#include <math.h>
+#include <stdio.h>
+fprintf(stdout, "pi = %.5f\en", 4 * atan(1.0));
+.fi
+.in
 .SH AUTHORS
+.TS
+center, box invis, tab(:);
+l s
+l
+l.
+/..####...##......##.....
+/.##..##..##......##.....
+/.######..##......##.....
+/.##..##..##......##.....
+/.##..##..######..######.
+/........................
+/.##...##..######..##..##.
+/.###.###..##......###.##.
+/.##.#.##..####....##.###.
+/.##...##..##......##..##.
+/.##...##..######..##..##.
+/.........................
+/.##...##..##..##...####..######.
+/.###.###..##..##..##.......##...
+/.##.#.##..##..##...####....##...
+/.##...##..##..##......##...##...
+/.##...##...####....####....##...
+/................................
+/.#####...######..######.
+/.##..##....##....##.....
+/.##..##....##....####...
+/.##..##....##....##.....
+/.#####...######..######.
+/........................
+.TE
+.ce
+(...while writing _printf)
+
 .SS Bobby Yang
 .UR https://github.com/glyif/
 Github
@@ -162,4 +194,5 @@ Github
 Twitter
 .UE
 .SH SEE ALSO
-printf
+.BR printf (1),
+.BR printf (3)
