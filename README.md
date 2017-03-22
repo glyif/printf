@@ -1,6 +1,6 @@
 <img src="https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png" alt="Holberton logo">
 # printf
-## Author: Bobby Yang && Elaine Yeung (Batch 2)
+### Author: Bobby Yang && Elaine Yeung (Batch 2)
 
 ## Synopsis
 This is a custom implementation of `printf` from the standard library `<stdio.h>`.
@@ -27,13 +27,6 @@ This is a custom implementation of `printf` from the standard library `<stdio.h>
 |15 | *Advanced* |Handle the following custom conversion specifier:<br>`R`: prints the rot13'ed string |
 |16 | *Advanced* |All the above options work well together. |
 
-
-
-| Command | Description |
-| --- | --- |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
-
 ## History
 The Game of Thrones references throughout this project can be traced back to this message on slack:
 ![image](https://cloud.githubusercontent.com/assets/23224088/24180640/43ada0a4-0e73-11e7-8ee3-95a78aa7da2f.png)
@@ -51,8 +44,7 @@ When Elaine asked Bobby the reason why she was the "mother of dragons" he stated
 
 ### Base Printf
 - [ ] Write output to stdout, the standard output stream
-- [x] Returns: the number of characters printed (excluding the null byte used to en\
-d output to strings)
+- [x] Returns: the number of characters printed (excluding the null byte used to end output to strings)
 - [ ] Get [@Julien Barbier](https://github.com/jbarbier) to say I did a good job ;)
 
 ![image](https://cloud.githubusercontent.com/assets/23224088/24182203/55307342-0e7d-11e7-85cc-22c9189f8d13.jpg)
