@@ -34,24 +34,13 @@ This is a custom implementation of `printf` from the standard library `<stdio.h>
 | `git status` | List all *new or modified* files |
 | `git diff` | Show file differences that **haven't been** staged |
 
-
-## Using
-```bash
-gcc -Werror -Wextra -pedantic test/test.c _printf.c formatters.c _putchar.c _strlen\
-.c _strcopy.c -o printf
-
-./printf
-```
-
-For this command you will need to be in the `root` project folder, not the `main` f\
-older. As you'll be compiling the `main/0-main.c` file in the `main` folder and the\
- `0-sum_them_all.c` file in the current directory.
-
 ## History
 The Game of Thrones references throughout this project can be traced back to this message on slack:
 ![image](https://cloud.githubusercontent.com/assets/23224088/24180640/43ada0a4-0e73-11e7-8ee3-95a78aa7da2f.png)
-##
-## TODO
+
+When Elaine asked Bobby the reason why she was the "mother of dragons" he stated that this project was like Game of Thrones in that it required students to form alliances in order to conquer the task at hand. 
+
+## To Do
 ### Handle the following conversion specifiers:
 - [x] c - `char`
 - [x] s - `string`
@@ -64,5 +53,6 @@ The Game of Thrones references throughout this project can be traced back to thi
 - [ ] Write output to stdout, the standard output stream
 - [x] Returns: the number of characters printed (excluding the null byte used to en\
 d output to strings)
-
 - [ ] Get [@Julien Barbier](https://github.com/jbarbier) to say I did a good job ;)
+
+![image](https://cloud.githubusercontent.com/assets/23224088/24169948/6014c632-0e3c-11e7-9a20-1b8ae88d1281.jpg)
