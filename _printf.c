@@ -5,7 +5,7 @@
 #include "holberton.h"
 
 /**
- * print_all - prints anything
+ * _printf - prints anything
  * @format: format of the number preceeding arguments to print
  *
  * Return: nothing
@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 		}
 
 		i++;
-			
+
 	}
 	va_end(ap);
 
