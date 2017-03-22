@@ -2,10 +2,12 @@
 #include "holberton.h"
 
 /**
- * print_string - prints string
+ * buffer_string - prints string
  * @ap: va_list
+ * @buffer: character string
+ * @index: position in string
+ * Return: integer
  */
-
 int buffer_string(va_list ap, char *buffer, int index)
 {
 	char *s;
@@ -17,9 +19,17 @@ int buffer_string(va_list ap, char *buffer, int index)
 	return (index);
 }
 
+/**
+ * buffer_char - prints char
+ * @ap: va_list
+ * @buffer: character string
+ * @index: position in string
+ * Return: integer
+ */
 int buffer_char(va_list ap, char *buffer, int index)
 {
 	char s;
+
 	s = va_arg(ap, int);
 
 	buffer[index] = s;
@@ -27,11 +37,18 @@ int buffer_char(va_list ap, char *buffer, int index)
 	return (index + 1);
 }
 
+/**
+ * buffer_int - prints integer
+ * @ap: va_list
+ * @buffer: character string
+ * @index: position in string
+ * Return: integer
+ */
 int buffer_int(va_list ap, char *buffer, int index)
 {
 	char *s;
-
 	int in;
+
 	in = va_arg(ap, int);
 
 	if (in < 0)
@@ -47,11 +64,18 @@ int buffer_int(va_list ap, char *buffer, int index)
 	return (index);
 }
 
+/**
+ * buffer_int_b - prints binary integer
+ * @ap: va_list
+ * @buffer: character string
+ * @index: position in string
+ * Return: integer
+ */
 int buffer_int_b(va_list ap, char *buffer, int index)
 {
 	char *s;
-
 	int in;
+
 	in = va_arg(ap, int);
 
 	if (in < 0)
