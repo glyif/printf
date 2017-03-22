@@ -1,8 +1,11 @@
+#ifndef BASE_STRUCT_H
+#define BASE_STRUCT_H
+
 /**
- * struct print - base structure for _printf
+ * struct routes - base structure for _printf
  * @s: string for matching formaters
- * @(*f): function pointer that points to the corresponding function of the formater
- *
+ * @f: function pointer to the corresponding function of the formatter
+ * @c: character
  */
 
 typedef struct routes
@@ -10,3 +13,4 @@ typedef struct routes
 	char c;
 	int (*f)(va_list, char *, int);
 } routes;
+#endif
