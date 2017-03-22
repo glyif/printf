@@ -15,7 +15,7 @@ This is a custom implementation of `printf` from the standard library `<stdio.h>
 $ git clone [insert repository link here]
 $ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c
 ```
-Compile everything within the directory and use _printf in your code.
+Compile everything within the directory and use _printf in your main function.
 
 ## Project Breakdown
 | Task # | Type | Short description |
