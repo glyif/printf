@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ *router -  checks input string for format type
+ *@fmt: character
+ *Return: 0 on success
+ */
 int (*router(char fmt))(va_list, char *, int)
 {
 	int i;
@@ -18,7 +22,7 @@ int (*router(char fmt))(va_list, char *, int)
 	{
 		if (router[i].c == fmt)
 			return (router[i].f);
-		
+
 		i++;
 	}
 
