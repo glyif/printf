@@ -1,0 +1,303 @@
+.TH _PRINTF 3 "20 MAR 2017" LOCAL "HOLBERTON SCHOOL BATCH 2"
+.SH NAME
+_printf - formatted output conversion
+.SH SYNOPSIS
+.B #include 'holberton.h'
+
+\fBint _printf(const char *\fR\fIformat\fR\fB, ...);\fR
+
+
+.BR int _printf(code in here)
+
+.SH DESCRIPTION
+The  functions in the
+.BR _printf()
+family produce output according to a format as described below.  The functions
+.BR _printf()
+write output to stdout, the standard output stream.
+
+.SS Format of the format string
+The format string is a character string, beginning and ending
+in its initial shift state, if any.
+The format string is composed of zero or more directives: ordinary
+characters (not
+.BR % ),
+which are copied unchanged to the output stream;
+and conversion specifications, each of which results in fetching zero or
+more subsequent arguments.
+.sp
+Each conversion specification is introduced by
+the character
+.BR % ,
+and ends with a
+.IR "conversion specifier" .
+.IR flags ,
+an optional minimum
+.IR "field width" ,
+an optional
+.I precision
+and an optional
+.IR "length modifier" .
+
+.SS Conversion specifiers
+%f print a floating-point number
+%g print a general-format floating-point number
+.TP
+c
+print a single character
+.TP
+s
+print a string of characters
+.TP
+%
+print a percent sign (\% also works)
+.TP
+d
+print a decimal (base 10) number
+.TP
+i
+print an integer in base 10
+.TP
+b
+unsigned int argument is converted to binary
+.TP
+u
+print an unsigned decimal (base 10) number
+.TP
+o
+print a number in octal (base 8)
+.TP
+x
+print a number in hexidecimal (base 16)
+
+.SS The flag characters
+The character % is followed by zero or more of the following flags:
+.TP
+.B #
+The value should be converted to an "alternate form".
+For
+.B o
+conversions, the first character of the output string is made zero
+(by prefixing a 0 if it was not zero already).
+For
+.B x
+and
+.B X
+conversions, a nonzero result has the string "0x" (or "0X" for
+.B X
+conversions) prepended to it.
+For
+.BR a ,
+.BR A ,
+.BR e ,
+.BR E ,
+.BR f ,
+.BR F ,
+.BR g ,
+and
+.B G
+conversions, the result will always contain a decimal point, even if no
+digits follow it (normally, a decimal point appears in the results of th\
+ose
+conversions only if a digit follows).
+For
+.B g
+and
+.B G
+conversions, trailing zeros are not removed from the result as they woul\
+d
+otherwise be.
+For other conversions, the result is undefined.
+.TP
+.B \&0
+The value should be zero padded.
+For
+.BR d ,
+.BR i ,
+.BR o ,
+.BR u ,
+.BR x ,
+.BR X ,
+.BR a ,
+.BR A ,
+.BR e ,
+.BR E ,
+.BR f ,
+.BR F ,
+.BR g ,
+and
+.B G
+conversions, the converted value is padded on the left with zeros rather
+than blanks.
+If the
+.B \&0
+and
+.B \-
+flags both appear, the
+.B \&0
+flag is ignored.
+If a precision is given with a numeric conversion
+.RB ( d ,
+.BR i ,
+.BR o ,
+.BR u ,
+.BR x ,
+and
+.BR X ),
+the
+.B \&0
+flag is ignored.
+For other conversions, the behavior is undefined.
+.TP
+.B \-
+The converted value is to be left adjusted on the field boundary.
+(The default is right justification.)
+Except for
+.B n
+conversions, the converted value is padded on the right with blanks, rat\
+her
+than on the left with blanks or zeros.
+A
+.B \-
+overrides a
+.B \&0
+if both are given.
+.TP
+.B \(aq \(aq
+(a space) A blank should be left before a positive number
+(or empty string) produced by a signed conversion.
+.TP
+.B +
+A sign (+ or \-) should always be placed before a number produced by a signed conversion.
+By default a sign is used only for negative numbers.
+A
+.B +
+overrides a space if both are used.
+.PP
+The five flag characters above are defined in the C standard.
+
+.TP
+X
+.TP
+S
+.TP
+.TP
+p
+.TP
+l
+.TP
+h
+
+
+
+.SH OPTIONS
+.TP 5
+f1
+is one option
+.TP
+f2
+is another option
+.TP
+f2
+is another option
+.nf
+
+.fi
+.TP
+.I -r
+option options options
+.TP
+.I -n
+more fucking options on top of options
+.SH EXIT STATUS
+.SH RETURN VALUE
+Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
+.SH ERRORS
+.SH ENVIRONMENT
+.SH FILES
+.SH VERSIONS
+.SH CONFORMING TO
+.SH NOTES
+This is a group project completed for
+.UR https://www.holbertonschool.com/
+Holberton School
+.UE .
+.SS About Holberton School
+Holberton School is a project-based alternative to college for the next generation of software engineers. Using project-based learning and peer learning, our mission is to train the best software engineers of their generation.
+
+At Holberton School, there are no formal teachers and no formal courses. Instead, everything is project centered. We give our students increasingly difficult programming challenges to solve, and give them minimal initial directions on how to solve them. As a consequence, students naturally look for the theory and tools they need, understand them, use them, work together, and help each other.
+
+.SH BUGS
+Report _printf bugs to bug\-coreutils@gnu.org
+.br
+GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
+.br
+General help using GNU software: <http://www.gnu.org/gethelp/>
+.br
+Report printf translation bugs to <http://translationproject.org/team/>
+.SH EXAMPLE
+To print
+.I Pi
+to five decimal places:
+.in +4n
+.nf
+
+#include <math.h>
+#include <stdio.h>
+fprintf(stdout, "pi = %.5f\en", 4 * atan(1.0));
+.fi
+.in
+.SH AUTHORS
+.TS
+center, box invis, tab(:);
+l s
+l
+l.
+/..####...##......##.....
+/.##..##..##......##.....
+/.######..##......##.....
+/.##..##..##......##.....
+/.##..##..######..######.
+/........................
+/.##...##..######..##..##.
+/.###.###..##......###.##.
+/.##.#.##..####....##.###.
+/.##...##..##......##..##.
+/.##...##..######..##..##.
+/.........................
+/.##...##..##..##...####..######.
+/.###.###..##..##..##.......##...
+/.##.#.##..##..##...####....##...
+/.##...##..##..##......##...##...
+/.##...##...####....####....##...
+/................................
+/.#####...######..######.
+/.##..##....##....##.....
+/.##..##....##....####...
+/.##..##....##....##.....
+/.#####...######..######.
+/........................
+.TE
+.ce
+(...while writing _printf)
+
+.SS Bobby Yang
+.UR https://github.com/glyif/
+Github
+.UE
+
+.UR https://twitter.com/bobstermyang
+Twitter
+.UE
+
+.SS Elaine Yeung
+.UR https://github.com/yeungegs/
+Github
+.UE
+
+.UR https://twitter.com/egsy
+Twitter
+.UE
+.SH SEE ALSO
+.BR printf (1),
+.BR printf (3)
