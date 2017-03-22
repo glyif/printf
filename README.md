@@ -1,4 +1,5 @@
 <img src="https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png" alt="Holberton logo">
+
 # _printf
 
 ### Author: Bobby Yang && Elaine Yeung (Batch 2)
@@ -8,7 +9,8 @@ This is a custom implementation of `printf` from the standard library `<stdio.h>
 
 ![image](https://cloud.githubusercontent.com/assets/23224088/24168852/ea80a146-0e38-11e7-881c-97735fbb91c7.jpg)
 
-##Compilation and use
+## Compilation and use
+
 ```
 $ git clone [insert repository link here]
 $ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c
