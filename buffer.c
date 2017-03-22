@@ -2,8 +2,8 @@
 
 /**
  * buffer_check - checks if buffer is filled
- * @buffer - buffer to check
- * @index - current index of the buffer
+ * @buffer: buffer to check
+ * @index: current index of the buffer
  *
  * Return: index of the buffer
  */
@@ -19,6 +19,12 @@ int buffer_check(char *buffer, int index)
 
 	return (index);
 }
+
+/**
+ * reset_buffer - resets buffer
+ * @buffer: buffer to check
+ * @size: integer size of buffer
+ */
 
 void reset_buffer(char *buffer, int size)
 {
