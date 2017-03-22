@@ -1,11 +1,10 @@
 #include "holberton.h"
-
 /**
  * _strcpy - copy from one to another
  * @buffer: to buffer
  * @from: from
  * @index: start index;
- *
+ * Return: integer
  */
 
 int _strcpy(char *buffer, char *from, int index)
@@ -14,7 +13,7 @@ int _strcpy(char *buffer, char *from, int index)
 
 	i = 0;
 
-	while(from[i] != '\0')
+	while (from[i] != '\0')
 	{
 		index = buffer_check(buffer, index);
 
@@ -89,8 +88,8 @@ int intlen(int n)
 
 /**
  * negative_copy - if int is negative, puts a '-' char in front
- * @buffer - buffer to copy to
- * @index - index of the buffer to copy to
+ * @buffer: buffer to copy to
+ * @index: index of the buffer to copy to
  *
  * Return: index of the buffer + 1;
  */
