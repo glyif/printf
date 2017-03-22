@@ -9,24 +9,26 @@ This is a custom implementation of `printf` from the standard library `<stdio.h>
 ## Project Breakdown
 | Task # | Type | Short description |
 | ---: | --- | --- |
-|0 | mandatory     | Write a function that produces output according to a format. |
-|1 | mandatory     | Handle the following conversion specifiers: `d` `i` |
-|2 | mandatory | [Create a man page for your function.](./man_3_printf)
-|3 | advanced | Handle the following custom conversion specifiers: <br>`b` the unsigned int argument is converted to binary |
-|4 | advanced | Handle the following conversion specifiers: <br> `u`, `o`, `x`, `X`|
-|5 | advanced | Use a local buffer of 1024 chars in order to call write as little as possible.|
-|6 | advanced | Handle the following custom conversion specifier: <br>`S` |
-|7 | advanced | Handle the following conversion specifier: <br>`p`|
-|8 | advanced |Handle the following flag characters for non-custom conversion specifiers:<br>`+`, ` ` (space), `#` |
-|9 | advanced |Handle the following length modifiers for non-custom conversion specifiers:<br>`l`, `h`<br><br>
-Conversion specifiers to handle: `d`, `i`, `u`, `o`, `x`, `X` |
-|10 | advanced |Handle the field width for non-custom conversion specifiers. |
-|11 | advanced | Handle the precision for non-custom conversion specifiers. |
-|12 | advanced | Handle the `0` flag character for non-custom conversion specifiers.|
-|13 | advanced | Handle the `-` flag character for non-custom conversion specifiers.|
-|14 | advanced |Handle the following custom conversion specifier:<br>`r` : prints the reversed string |
-|15 | advanced |Handle the following custom conversion specifier:<br>`R`: prints the rot13'ed string |
-|16 | advanced |All the above options work well together. |
+|0 | **Mandatory**     | Write a function that produces output according to a format. |
+|1 | **Mandatory**     | Handle the following conversion specifiers: `d` `i` |
+|2 | **Mandatory** | [Create a man page for your function.](./man_3_printf)
+|3 | *Advanced* | Handle the following custom conversion specifiers: <br>`b` the unsigned int argument is converted to binary |
+|4 | *Advanced* | Handle the following conversion specifiers: <br> `u`, `o`, `x`, `X`|
+|5 | *Advanced* | Use a local buffer of 1024 chars in order to call write as little as possible.|
+|6 | *Advanced* | Handle the following custom conversion specifier: <br>`S` |
+|7 | *Advanced* | Handle the following conversion specifier: <br>`p`|
+|8 | *Advanced* |Handle the following flag characters for non-custom conversion specifiers:<br>`+`, ` ` (space), `#` |
+|9 | *Advanced* |Handle the following length modifiers for non-custom conversion specifiers:<br>`l`, `h`<br><br>Conversion specifiers to handle: `d`, `i`, `u`, `o`, `x`, `X` |
+|10 | *Advanced* |Handle the field width for non-custom conversion specifiers. |
+|11 | *Advanced* | Handle the precision for non-custom conversion specifiers. |
+|12 | *Advanced* | Handle the `0` flag character for non-custom conversion specifiers.|
+|13 | *Advanced* | Handle the `-` flag character for non-custom conversion specifiers.|
+|14 | *Advanced* |Handle the following custom conversion specifier:<br>`r` : prints the reversed string |
+|15 | *Advanced* |Handle the following custom conversion specifier:<br>`R`: prints the rot13'ed string |
+|16 | *Advanced* |All the above options work well together. |
+
+
+
 | Command | Description |
 | --- | --- |
 | `git status` | List all *new or modified* files |
