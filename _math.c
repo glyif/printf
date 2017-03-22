@@ -1,7 +1,7 @@
 /**
  * _abs - takes absolute value of a number
  * @n: number
- * 
+ *
  * Return: abs of n
  */
 
