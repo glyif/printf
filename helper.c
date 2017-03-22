@@ -11,7 +11,7 @@
 int _strcpy(char *buffer, char *from, int index)
 {
 	int i;
-	
+
 	i = 0;
 
 	while(from[i] != '\0')
